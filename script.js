@@ -28,14 +28,12 @@ function addTransaction(e) {
       description: transactionInput.value,
       amount: +amountInput.value,
     };
-
+    transactionInput.value = "";
+    amountInput.value = "";
     transactions.push(transaction);
     addTransactionToDOM(transaction);
     updateValues();
     updateLocalStorage();
-
-    incomeText.value = "";
-    expenseText.value = "";
   }
 }
 
